@@ -15,4 +15,4 @@ FOUNDATION_EXPORT const unsigned char libdav1dVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <libdav1d/PublicHeader.h>
 
-
+#import <libdav1d/dav1d.h>

@@ -1,0 +1,22 @@
+[binaries]
+c = 'clang'
+cpp = 'clang++'
+ar = 'ar'
+strip = 'strip'
+
+[built-in options]
+c_args = ['-arch', 'arm64', '-mios-simulator-version-min=10.0', '-isysroot', simsdkroot]
+cpp_args = c_args
+c_link_args = c_args
+cpp_link_args = c_args
+
+[properties]
+root = simroot
+has_function_printf = true
+has_function_hfkerhisadf = false
+
+[host_machine]
+system = 'darwin'
+cpu_family = 'arm'
+cpu = 'arm64'
+endian = 'little'
