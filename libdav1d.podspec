@@ -19,7 +19,7 @@ dav1d is a new AV1 cross-platform decoder, open-source, and focused on speed and
   s.author           = { 'Alliance for Open Media' => 'https://aomedia.org' }
   s.platform	    = :ios
   s.source           = { :http => 'https://github.com/link-u/libdav1d-static/releases/download/0.0.1/libdav1d.xcframework.zip' }
-  s.vendored_frameworks = 'libdav1d.xcframework'
+  s.ios.vendored_frameworks = 'libdav1d.xcframework'
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'libdav1d.xcframework'
 end
