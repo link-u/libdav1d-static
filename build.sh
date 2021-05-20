@@ -6,6 +6,7 @@
 #  Created by murakami on 2021/05/14.
 #  
 
+mkdir generated
 cp build/crossfiles/*.meson dav1d/package/crossfiles/
 cd dav1d
 
