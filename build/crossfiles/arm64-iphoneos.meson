@@ -5,7 +5,7 @@ ar = 'ar'
 strip = 'strip'
 
 [built-in options]
-c_args = ['-arch', 'arm64', '-miphoneos-version-min=10.0', '-isysroot', iossdkroot]
+c_args = ['-arch', 'arm64','-miphoneos-version-min=10.0', '-isysroot', iossdkroot]
 cpp_args = c_args
 c_link_args = c_args
 cpp_link_args = c_args

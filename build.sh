@@ -19,7 +19,7 @@ for f in $files; do
   echo --cross-file=package/crossfiles/${f}
   meson "build-${f}" "--cross-file=package/crossfiles/${f}" "--cross-file=package/crossfiles/constants.meson" --default-library=static
   cd "build-${f}"
-  meson configure "-Dbitdepths=['8','16']" -Denable_asm=true -Denable_avx512=true
+  meson configure "-Dbitdepths=['8','16']" -Denable_asm=true -Denable_avx512=true -Db_bitcode=true
   ninja -v
   cp src/libdav1d.a "../../generated/${f%.meson}.a"
   cd ../
