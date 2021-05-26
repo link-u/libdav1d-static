@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libdav1d'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'dav1d is an AV1 decoder :)'
   s.description      = <<-DESC
 dav1d is a new AV1 cross-platform decoder, open-source, and focused on speed and correctness.
@@ -38,4 +38,8 @@ dav1d is a new AV1 cross-platform decoder, open-source, and focused on speed and
   end
   
   s.default_subspecs = 'both'
+  s.prepare_command = <<-CMD
+                      mv libdav1d-8bit.xcframework libdav1d.xcframework
+                      mv libdav1d-16bit.xcframework libdav1d.xcframework
+                      CMD
 end
