@@ -26,17 +26,17 @@ dav1d is a new AV1 cross-platform decoder, open-source, and focused on speed and
   s.requires_arc = true
   
   s.subspec 'both' do |ss|
-    ss.ios.preserve_paths = 'frameworksboth/libdav1d.xcframework'
-    ss.ios.vendored_frameworks = 'frameworks/both/libdav1d.xcframework'
+    ss.ios.preserve_paths = 'both/libdav1d.xcframework'
+    ss.ios.vendored_frameworks = 'both/libdav1d.xcframework'
   end
   
   s.subspec '8bit' do |ss|
-    ss.ios.preserve_paths = 'frameworks/8bit/libdav1d.xcframework'
-    ss.ios.vendored_frameworks = 'frameworks/8bit/libdav1d.xcframework'
+    ss.ios.preserve_paths = '8bit/libdav1d.xcframework'
+    ss.ios.vendored_frameworks = '8bit/libdav1d.xcframework'
   end
   
   s.subspec '16bit' do |ss|
-    ss.ios.preserve_paths = 'frameworks/16bit/libdav1d.xcframework'
-    ss.ios.vendored_frameworks = 'frameworks/16bit/libdav1d.xcframework'
+    ss.ios.preserve_paths = '16bit/libdav1d.xcframework'
+    ss.ios.vendored_frameworks = '16bit/libdav1d.xcframework'
   end
 end
