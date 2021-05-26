@@ -39,4 +39,6 @@ dav1d is a new AV1 cross-platform decoder, open-source, and focused on speed and
     ss.ios.preserve_paths = '16bit/libdav1d.xcframework'
     ss.ios.vendored_frameworks = '16bit/libdav1d.xcframework'
   end
+  
+  s.default_subspecs = 'both'
 end
