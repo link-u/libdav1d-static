@@ -1,0 +1,22 @@
+[binaries]
+c = 'clang'
+cpp = 'clang++'
+ar = 'ar'
+strip = 'strip'
+
+[built-in options]
+c_args = ['-arch', 'i386', '-miphoneos-version-min=10.0', '-isysroot', simsdkroot, '-fembed-bitcode=marker']
+cpp_args = c_args
+c_link_args = c_args
+cpp_link_args = c_args
+
+[properties]
+root = simroot
+has_function_printf = true
+has_function_hfkerhisadf = false
+
+[host_machine]
+system = 'darwin'
+cpu_family = 'x86'
+cpu = 'i386'
+endian = 'little'
