@@ -4,7 +4,7 @@ Xcode 14
 
 # dav1d のアップデートをする方へ
 
-SDK のバージョンを確認し、build/crossfiles/\*.meson を編集してください
+SDK のバージョンを確認し、[constants.meson](./build/crossfiles/constants.meson) を編集してください
 
 ```
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
