@@ -24,8 +24,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .binaryTarget(
             name: "libdav1d",
-            url: "https://github.com/link-u/libdav1d-static/releases/download/0.0.3/libdav1d.xcframework.zip",
-            checksum: "8390757146ebb39ae89b121a55a0b038a7d9614e38a11f753b8effa5f48e66ca"
+            url: "https://github.com/link-u/libdav1d-static/releases/download/0.0.8/libdav1d.xcframework.zip",
+            checksum: "47fb9f902072961dac77c8f6f6c5f5da4cebaebb56e65501a6a25e41e584d937"
         )
     ],
     cLanguageStandard: .gnu11,
