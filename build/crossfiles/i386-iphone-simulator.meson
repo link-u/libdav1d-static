@@ -5,7 +5,7 @@ ar = 'ar'
 strip = 'strip'
 
 [built-in options]
-c_args = ['-arch', 'i386', '-miphoneos-version-min=10.0', '-isysroot', simsdkroot, '-fembed-bitcode=marker']
+c_args = ['-arch', 'i386', '-miphoneos-version-min=10.0', '-isysroot', simsdkroot]
 cpp_args = c_args
 c_link_args = c_args
 cpp_link_args = c_args

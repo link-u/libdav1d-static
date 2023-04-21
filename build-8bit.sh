@@ -17,9 +17,9 @@ echo $files
 for f in $files; do
   mkdir "build-${f}"
   echo --cross-file=package/crossfiles/${f}
-  meson "build-${f}" "--cross-file=package/crossfiles/${f}" "--cross-file=package/crossfiles/constants.meson" --default-library=static
+  meson setup --wipe "build-${f}" "--cross-file=package/crossfiles/${f}" "--cross-file=package/crossfiles/constants.meson" --default-library=static
   cd "build-${f}"
-  meson configure -Dbitdepths=8 -Denable_asm=true -Denable_avx512=true -Db_bitcode=true
+  meson configure -Dbitdepths=8 -Denable_asm=true
   ninja -v
   cp src/libdav1d.a "../../generated/${f%.meson}.a"
   cd ../
