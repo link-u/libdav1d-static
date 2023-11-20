@@ -28,5 +28,5 @@ xcodebuild -create-xcframework -library generated/iphone/libdav1d.a -headers "he
 cd artifacts
 zip libdav1d.xcframework.zip -r libdav1d.xcframework
 
-## sha256sum を作る
-sha256sum libdav1d.xcframework.zip > libdav1d.xcframework.zip.sha256sum
+## checksum を出力する
+swift package compute-checksum libdav1d.xcframework.zip  > libdav1d.xcframework.zip.checksum
