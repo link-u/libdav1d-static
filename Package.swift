@@ -24,7 +24,7 @@ let package = Package(
         .binaryTarget(
             name: "libdav1d",
             url: "https://github.com/link-u/libdav1d-static/releases/download/0.0.9/libdav1d.xcframework.zip",
-            checksum: "d010d9db2f0c0da48f5a7f914912c6a17b7ba764b6d3948d42bc1ad26817760b"
+            checksum: "98cecdf278d7034a3792915f368cac9935d43370b1b1d073104be3f731202714"
         )
     ],
     cLanguageStandard: .gnu11,
