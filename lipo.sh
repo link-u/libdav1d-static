@@ -20,8 +20,13 @@ lipo -create -output simulator/libdav1d.a -arch arm64 arm64-iphone-simulator.a -
 
 ## ライブラリをビルド
 cd "${SCRIPTS_DIR}"
-rm -rf libdav1d.xcframework
-xcodebuild -create-xcframework -library generated/iphone/libdav1d.a -headers "headers" -library generated/simulator/libdav1d.a -headers "headers" -output libdav1d.xcframework
+rm -rf artifacts
+mkdir -p artifacts
+xcodebuild -create-xcframework -library generated/iphone/libdav1d.a -headers "headers" -library generated/simulator/libdav1d.a -headers "headers" -output artifacts/libdav1d.xcframework
 
 ## zip で固める
+cd artifacts
 zip libdav1d.xcframework.zip -r libdav1d.xcframework
+
+## sha256sum を作る
+sha256sum libdav1d.xcframework.zip > libdav1d.xcframework.zip.sha256sum
