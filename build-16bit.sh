@@ -1,21 +1,29 @@
-#!/bin/sh
+#!/bin/bash
 
 #  build.sh
 #  libdav1d
 #
 #  Created by murakami on 2021/05/14.
-#  
+#
 
-mkdir generated
+set -eu
+set -o pipefail
+
+## スクリプトの保存されているディレクトリに移動する
+SCRIPTS_DIR="$(cd $(dirname "${0}") && pwd)/"
+cd "${SCRIPTS_DIR}"
+
 cp build/crossfiles/*.meson dav1d/package/crossfiles/
 cd dav1d
 
-find ../build/crossfiles/ -name \*iphoneos\* -or -name \*simulator\*
-files=`find ../build/crossfiles/ -name \*iphoneos\* -or -name \*simulator\* | sed "s!^.*/!!"`
+files="$(find ../build/crossfiles/ -name \*iphoneos\* -or -name \*simulator\* | sed "s!^.*/!!")"
 echo $files
 
+## generated ディレクトリを作る
+mkdir -p "${SCRIPTS_DIR}/generated"
+
 for f in $files; do
-  mkdir "build-${f}"
+  mkdir -p "build-${f}"
   echo --cross-file=package/crossfiles/${f}
   meson "build-${f}" "--cross-file=package/crossfiles/${f}" "--cross-file=package/crossfiles/constants.meson" --default-library=static
   cd "build-${f}"
@@ -24,3 +32,8 @@ for f in $files; do
   cp src/libdav1d.a "../../generated/${f%.meson}.a"
   cd ../
 done
+
+## dav1d サブモジュールの changed ファイルをリセットする
+cd "${SCRIPTS_DIR}/dav1d"
+git checkout -- .
+git clean -f
