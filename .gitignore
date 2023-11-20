@@ -5,5 +5,5 @@ generated
 /.swiftpm
 /.build
 
-/.libdav1d.xcframework
-/.libdav1d.xcframework.zip
+/libdav1d.xcframework
+/libdav1d.xcframework.zip
