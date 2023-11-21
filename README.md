@@ -18,7 +18,7 @@
 
 ## 2. 概要
 
-dav1d を static リンク舌ライブラリ
+dav1d を static リンクしたライブラリ
 
 <br/>
 
