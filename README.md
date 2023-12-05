@@ -48,7 +48,7 @@ brew install meson nasm zip
 2. `build-8bit.sh` を実行する
 
     ```bash
-    bahs build-8bit.sh
+    bash build-8bit.sh
     ```
 
 3. `lipo.sh` を実行する。
